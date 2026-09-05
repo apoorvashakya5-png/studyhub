@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>StudyHub — Student Platform</title><meta name="description" content="StudyHub: learn, practice and track your study progress.">
+<link rel="stylesheet" href="style.css"></head>
+<body>
+<header><a class="brand" href="#">📚 <span>StudyHub</span></a><nav><a href="#subjects">Subjects</a><a href="#practice">MCQs</a><a href="#dashboard">Dashboard</a><button id="authBtn" class="btn">Login</button></nav></header>
+<main>
+<section class="hero"><div><span class="pill">🎓 Student learning platform</span><h1>Learn. Practice.<br><span>Grow every day.</span></h1><p>StudyHub helps students organize learning, practice questions, save notes and track progress.</p><button class="btn" id="startBtn">Start Learning</button></div><div class="heroBox"><h3>Your Progress</h3><strong id="progress">0%</strong><div class="bar"><i id="progressBar"></i></div><p id="welcome">Login to sync your progress across devices.</p></div></section>
+
+<section id="subjects"><div class="head"><div><small>LEARNING</small><h2>Subjects</h2></div></div><div class="grid">
+<div class="card subject">➗<h3>Maths</h3><p>Concepts & practice</p></div><div class="card subject">🧠<h3>Reasoning</h3><p>Logical thinking</p></div><div class="card subject">📖<h3>Hindi</h3><p>Grammar & vocabulary</p></div><div class="card subject">🌎<h3>General Knowledge</h3><p>Important facts</p></div><div class="card subject">💻<h3>Computer</h3><p>Computer fundamentals</p></div>
+</div></section>
+
+<section id="practice" class="light"><div class="head"><div><small>PRACTICE</small><h2>MCQ Challenge</h2></div><b id="score">Score: 0/0</b></div><div class="card quiz"><p id="qno"></p><h3 id="question"></h3><div id="answers"></div><button class="btn" id="next" disabled>Next</button><p id="quizMsg"></p></div></section>
+
+<section id="dashboard"><div class="head"><div><small>PERSONAL</small><h2>Student Dashboard</h2></div></div><div class="dash">
+<div class="card"><h3>✅ My Tasks</h3><div class="row"><input id="taskText" class="input" placeholder="Add a task"><button id="addTask" class="btn">Add</button></div><ul id="tasks"></ul></div>
+<div class="card"><h3>📝 My Notes</h3><input id="noteTitle" class="input" placeholder="Note title"><textarea id="noteContent" class="input area" placeholder="Write your note..."></textarea><button id="saveNote" class="btn">Save Note</button><ul id="notes"></ul></div>
+<div class="card center"><h3>⏱️ Focus Timer</h3><div class="timer" id="timer">25:00</div><button class="btn" id="go">Start</button> <button class="btn ghost" id="pause">Pause</button><button class="btn ghost" id="reset">Reset</button></div></div></section>
+</main>
+<footer>📚 StudyHub · Learn • Practice • Grow · © 2026</footer>
+
+<div class="modal" id="modal"><div class="modalBox"><button class="x" id="close">×</button><div id="loginView"><h2>Welcome back 👋</h2><input id="lemail" class="input" placeholder="Email"><input id="lpass" class="input" type="password" placeholder="Password"><button class="btn full" id="login">Login</button><p>New here? <button class="link" id="showRegister">Create account</button></p></div>
+<div id="registerView" hidden><h2>Create account 🎓</h2><input id="rname" class="input" placeholder="Your name"><input id="remail" class="input" placeholder="Email"><input id="rpass" class="input" type="password" placeholder="Password (6+ characters)"><button class="btn full" id="register">Register</button><p>Already registered? <button class="link" id="showLogin">Login</button></p></div><p id="authMsg"></p></div></div>
+<script src="app.js"></script></body></html>
